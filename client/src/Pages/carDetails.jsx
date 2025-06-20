@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useAppContext } from "../AppContext/Context";
 import toast from "react-hot-toast";
-import CarCard from "../components/CarCard";
+import CarCard from "../Components/CarCard";
 
 const CarDetails = () => {
   const { id } = useParams();
