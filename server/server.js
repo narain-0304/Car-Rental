@@ -15,7 +15,7 @@ const app = express();
 await connectDb();
 await connectCloudinary();
 const allowedOrigins = ['http://localhost:5173','https://rentro-pi.vercel.app']
-app.use(cors({origin:allowedOrigins,credentials:true}));
+app.use(cors({origin:'*'}));
 app.use(cookieParser());
 app.post('/stripe',express.raw({type:'application/json'}),stripeWebhook);
 
