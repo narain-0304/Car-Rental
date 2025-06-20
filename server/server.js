@@ -12,14 +12,14 @@ import { stripeWebhook } from './controller/bookingController.js';
 
 
 const app = express();
-const allowedOrigins = ['http://localhost:5173','https://rentro-pi.vercel.app']
-app.post('/stripe',express.raw({type:'application/json'}),stripeWebhook);
 await connectDb();
 await connectCloudinary();
+const allowedOrigins = ['http://localhost:5173','https://rentro-pi.vercel.app']
+app.use(cors({origin:allowedOrigins,credentials:true}));
+app.use(cookieParser());
+app.post('/stripe',express.raw({type:'application/json'}),stripeWebhook);
 
 app.use(express.json());
-app.use(cookieParser());
-app.use(cors({origin:allowedOrigins,credentials:true}));
 app.use('/api/user',userRouter);
 app.use('/api/profile',profileRouter)
 app.use('/api/admin',adminRoutes)
