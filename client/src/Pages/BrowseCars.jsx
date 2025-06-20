@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import CarCard from "../components/CarCard";
+import CarCard from "../Components/CarCard";
 import toast from "react-hot-toast";
 import { useAppContext } from "../AppContext/Context";
 import CustomDateTimePicker from "../Components/CustomDateTimePicker";

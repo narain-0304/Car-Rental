@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAppContext } from "../../AppContext/Context";
-import CarCard from "../../components/CarCard";
+import CarCard from "../../Components/CarCard";
 import toast from "react-hot-toast";
 import { FaCarSide } from "react-icons/fa";
 
