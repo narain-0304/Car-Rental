@@ -11,7 +11,7 @@ import Bookingroutes from './routes/BookingRoutes.js';
 import { stripeWebhook } from './controller/bookingController.js';
 
 const app = express();
-const allowedOrigins = ['http://localhost:5173','https://rentro-pi.vercel.app']
+const allowedOrigins = ['http://localhost:5173','https://rentro-woad.vercel.app']
 await connectDb();
 await connectCloudinary();
 app.post('/stripe',express.raw({type:'application/json'}),stripeWebhook);
